@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application.EventMappings>
+    <Events>
+        <Event Type="CacheServiceStarted">
+            <Severity Type="Information"/>
+            <DiagnosticInfo Description="Cache service has started successfully" />
+        </Event>
+        <Event Type="PageCachePurged">
+            <Severity Type="Debug"/>
+        </Event>
+        <Event Type="DatabaseConnectionTimeOut">
+            <Severity Type="Error"/>
+            <DiagnosticInfo 
+                Description="Connection to database timed out: {0}" 
+                RemedialAction="Run 'DBtest' script. Escalate to DB team." 
+                />
+        </Event>
+    </Events>
+</Application.EventMappings>
